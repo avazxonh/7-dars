@@ -1,9 +1,9 @@
 function getInitialOdds(n) {
-  let oddNumbers = [];
-  for (let i = 0; i < n; i++) {
-    oddNumbers.push(2 * i + 1);
+  let answer = [];
+  for (let i = 1; i <= n; i++) {
+    answer.length == 0 ? answer.push(1) : answer.push(answer.at(-1) + 2);
   }
-  return oddNumbers;
+  return answer;
 }
 
 console.log(getInitialOdds(5));
@@ -22,18 +22,13 @@ function getEvenReverse(arr) {
 console.log(getEvenReverse([4, 5, 7, 8, 6, 9]));
 
 // 3-m
-function rearrangeArray(arr) {
-  let result = [];
-  let n = arr.length;
-  for (let i = 0; i < Math.ceil(n / 2); i++) {
-    result.push(arr[i]);
-    if (i !== n - i - 1) {
-      result.push(arr[n - i - 1]);
-    }
-  }
-  return result;
+const array = [4, 5, 7, 8, 6, 9];
+let text = ``;
+for (let i = 0; i < array.length; i++) {
+  text += `${array.i}${arr.array.length - 1(i + 1)}`;
 }
-console.log(rearrangeArray([4, 5, 7, 8, 6, 9]));
+
+console.log(text);
 
 // 4-m
 function rangeSum(arr, K, L) {
